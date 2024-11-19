@@ -36,7 +36,7 @@ The project is organized around an abstract `Employee` class, with specific impl
 
 ## DAO Classes  
 
-DAO (Data Access Object) classes handle database operations for each employee type.  
+DAO (Data Access Object) classes handle CRUD database operations for each employee type.  
 
 ## User Interface
 
