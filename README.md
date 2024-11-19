@@ -38,10 +38,39 @@ The project is organized around an abstract `Employee` class, with specific impl
 
 DAO (Data Access Object) classes handle database operations for each employee type.  
 
-#### Example:  
-```java
-public class FullTimeEmployeeDAO {
-    public List<FullTimeEmployee> getAllEmployees() {
-        // Connect to the database and return a list of FullTimeEmployees
-    }
-}
+## User Interface
+
+The application uses **JavaFX** to display a list of employees.
+
+### Key Features:
+1. **Dynamic Employee List**:  
+   A `ListView` UI component displays employee data imported from the database on startup.  
+2. **Add Employees**:  
+   Users can add new employees, and the data is saved to the database.  
+
+---
+
+## How It Works  
+
+### 1. Startup
+- Connects to the PostgreSQL database.  
+- Retrieves all stored employee records using the DAO classes.  
+- Displays employee data in the `ListView`.  
+
+### 2. Adding Employees
+- Users can add new full-time or part-time employees via the UI.  
+- Data is saved to the database in real time.  
+
+### 3. Salary Calculation
+- Each employee type has a unique method to calculate salaries based on their employment type.  
+
+---
+
+## Database Connection  
+
+The project uses **JDBC** to connect to the PostgreSQL database. Connection parameters are defined in the DAO classes.
+
+![image](https://github.com/user-attachments/assets/c1cc226d-3740-4d5e-b090-7c80fb11d1e7)
+Employees imported from a database after program startup. Program automatically calculates salary and adds employee to list on add button click. Method of salary calculation depends on radiobutton selected. 
+
+
